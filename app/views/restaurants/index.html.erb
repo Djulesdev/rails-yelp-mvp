@@ -1,14 +1,16 @@
 <h1>List of all the restaurants</h1>
 
-<ul>
+<hr>
+
+<ul class="list-group">
   <% @restaurants.each do |restaurant| %>
-    <li>
+    <li class="list-group-item">
       <%= link_to restaurant.name, restaurant_path(restaurant) %>
-      <%= link_to "See details", restaurant_path(restaurant), class: "btn btn-primary"%>
+      <%= link_to "See details", restaurant_path(restaurant), class: "btn btn-light"%>
     </li>
   <% end %>
 </ul>
 
 <br>
 
-<%= link_to "Add a restaurant", new_restaurant_path %>
+<%= link_to "Add a restaurant", new_restaurant_path, class: "btn btn-light" %>
